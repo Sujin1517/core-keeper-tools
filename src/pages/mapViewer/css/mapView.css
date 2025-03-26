@@ -1,0 +1,10 @@
+#mapView {
+    width: 100svw;
+    height: 100svh;
+    position: absolute;
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-content: center;
+}

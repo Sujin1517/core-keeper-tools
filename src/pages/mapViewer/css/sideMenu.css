@@ -1,0 +1,71 @@
+#sideMenu {
+    position: absolute;
+
+    background-color: #1D2125;
+    color: white;
+    height: 100svh;
+    width: 360px;
+    padding: 8px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+}
+
+
+.menuContainer {
+    background-color: #2C333A;
+    border-radius: 10px;
+    padding: 8px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.menuInnerContiner {
+    background-color: #22272B;
+    border-radius: 5px;
+    padding: 5px;
+    padding-top: 0px;
+}
+
+
+.menuContainerHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.menuTitle {
+    color: aqua;
+    font-weight: 600;
+    font-size: 24pt;
+}
+.menuContinerTitle {
+    font-weight: 600;
+    font-size: 18pt;
+}
+.menuInnerContinerTitle {
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+
+.toolContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.toolContainerItem {
+    background-color: #2C333A;
+    border-radius: 10px;
+    padding: 3px;
+    flex: 1;
+    font-weight: 600;
+    font-size: 14pt;
+    text-align: center;
+}

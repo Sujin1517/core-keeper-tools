@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import MapPage from "./pages/map/MapPage.tsx";
+import MapPage from "./pages/mapViewer/MapPage.tsx";
 
 const App = () => {  return (
     <BrowserRouter>
