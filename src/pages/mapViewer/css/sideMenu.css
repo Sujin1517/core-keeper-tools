@@ -24,11 +24,14 @@
     flex-direction: column;
     gap: 8px;
 }
-.menuInnerContiner {
+.menuInnerContiner, .accordionMenu {
     background-color: #22272B;
     border-radius: 5px;
     padding: 5px;
     padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 
@@ -58,6 +61,7 @@
 .toolContainer {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 8px;
 }
 .toolContainerItem {

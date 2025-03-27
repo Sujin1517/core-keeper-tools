@@ -1,6 +1,7 @@
 import "./css/sideMenu.css";
 import AccordionMenu from "../../components/AccordionMenu.tsx"
 import SliderBar from "../../components/SliderBar.tsx";
+import CheckBox from "../../components/CheckBox.tsx";
 
 const SideMenu = () => {
 
@@ -20,6 +21,10 @@ const SideMenu = () => {
                 <div className="menuContinerTitle">Display Options</div>
                 <AccordionMenu menuName="Biome" elements={(
                     <div className="accordionMenu">
+                        <div className="toolContainer">
+                            <div>Show biome area</div>
+                            <CheckBox />
+                        </div>
                         <div>Transparency</div>
                         <div><SliderBar value={0} min={0} max={100} /></div>
                         <div>Inner rotation</div>
@@ -30,15 +35,23 @@ const SideMenu = () => {
                 )}/>
                 <AccordionMenu menuName="Grid" elements={(
                     <div className="accordionMenu">
-                    <div>Chunk grid</div>
-                    <div>Mob grid</div>
+                        <div className="toolContainer">
+                            <div>Show chunk grid</div>
+                            <CheckBox />
+                        </div>
+                        <div className="toolContainer">
+                            <div>Show mob spawn grid</div>
+                            <CheckBox />
+                        </div>
                     </div>
                 )}/>
                 <AccordionMenu menuName="Distance" elements={(
                     <div className="accordionMenu">
-                    <div>100</div>
-                    <div>250</div>
-                    <div>500</div>
+                        <div className="toolContainer">
+                            <CheckBox labelText="100" />
+                            <CheckBox labelText="250" />
+                            <CheckBox labelText="500" />
+                        </div>
                     </div>
                 )}/>
                 <AccordionMenu menuName="Highlighting" elements={(
