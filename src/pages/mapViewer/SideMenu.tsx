@@ -1,5 +1,6 @@
 import "./css/sideMenu.css";
 import AccordionMenu from "../../components/AccordionMenu.tsx"
+import SliderBar from "../../components/SliderBar.tsx";
 
 const SideMenu = () => {
 
@@ -20,8 +21,11 @@ const SideMenu = () => {
                 <AccordionMenu menuName="Biome" elements={(
                     <div className="accordionMenu">
                         <div>Transparency</div>
+                        <div><SliderBar value={0} min={0} max={100} /></div>
                         <div>Inner rotation</div>
+                        <div><SliderBar value={0} min={-180} max={180} /></div>
                         <div>Outer rotation</div>
+                        <div><SliderBar value={0} min={-180} max={180} /></div>
                     </div>
                 )}/>
                 <AccordionMenu menuName="Grid" elements={(
