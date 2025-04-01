@@ -1,14 +1,16 @@
 import "./css/checkBox.css";
 
-const CheckBox = (props:{defaultCheck?:boolean, labelText?:string} = { defaultCheck: false, labelText: "" }) => {
-    const { defaultCheck, labelText } = props;
+
+const CheckBox = 
+(props:{ defaultCheck?:boolean, labelText?:string, name?:string, onChange?:(name:string, e:boolean) => void }) => {
+    const { defaultCheck=false, labelText="", name="", onChange=(name:string, e:boolean) => {console.log(name, e)} } = props;
 
     return (
         <label>
             {labelText}
             <input type="checkbox"
-                checked={defaultCheck}
-                onChange={(e) => {console.log(e.target.checked)}}
+                defaultChecked={defaultCheck}
+                onChange={(e) => onChange(name, e.target.checked)}
             />
         </label>
     );

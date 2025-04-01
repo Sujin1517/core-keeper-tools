@@ -2,8 +2,11 @@ import "./css/sideMenu.css";
 import AccordionMenu from "../../components/AccordionMenu.tsx"
 import SliderBar from "../../components/SliderBar.tsx";
 import CheckBox from "../../components/CheckBox.tsx";
+import { useContext } from "react";
+import { OptionContext } from "./OptionContext.tsx";
 
 const SideMenu = () => {
+    const {options, ChangeOption} = useContext(OptionContext);
 
     return (
         <div id="sideMenu">
@@ -23,7 +26,7 @@ const SideMenu = () => {
                     <div className="accordionMenu">
                         <div className="toolContainer">
                             <div>Show biome area</div>
-                            <CheckBox />
+                            <CheckBox defaultCheck={options.showBiome} name="biome" onChange={ChangeOption}/>
                         </div>
                         <div>Transparency</div>
                         <div><SliderBar value={0} min={0} max={100} /></div>
@@ -37,20 +40,20 @@ const SideMenu = () => {
                     <div className="accordionMenu">
                         <div className="toolContainer">
                             <div>Show chunk grid</div>
-                            <CheckBox />
+                            <CheckBox defaultCheck={options.showBiome} name="chunkGrid" onChange={ChangeOption}/>
                         </div>
                         <div className="toolContainer">
                             <div>Show mob spawn grid</div>
-                            <CheckBox />
+                            <CheckBox defaultCheck={options.showBiome} name="mobGrid" onChange={ChangeOption}/>
                         </div>
                     </div>
                 )}/>
                 <AccordionMenu menuName="Distance" elements={(
                     <div className="accordionMenu">
                         <div className="toolContainer">
-                            <CheckBox labelText="100" />
-                            <CheckBox labelText="250" />
-                            <CheckBox labelText="500" />
+                            <CheckBox defaultCheck={options.showBiome} name="distance100" onChange={ChangeOption} labelText="100"/>
+                            <CheckBox defaultCheck={options.showBiome} name="distance250" onChange={ChangeOption} labelText="250"/>
+                            <CheckBox defaultCheck={options.showBiome} name="distance500" onChange={ChangeOption} labelText="500"/>
                         </div>
                     </div>
                 )}/>
